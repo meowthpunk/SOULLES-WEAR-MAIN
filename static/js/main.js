@@ -7,6 +7,7 @@ pizda.MainButton.color = '#8b8bd0'
 pizda.isExpanded = false
 pizda.MainButton.onClick = function(callback) {
   pizda.MainButton.text = 'Пошел нахуй'
+  console.log('pizda')
 }
 
 // console.log(func()[0][3])
