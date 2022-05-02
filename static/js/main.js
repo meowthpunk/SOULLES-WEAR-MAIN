@@ -8,9 +8,9 @@ pizda.MainButton.show()
 pizda.MainButton.color = '#8b8bd0'
 pizda.isExpanded = false
 callback = [{id:4,size:2}]
-pizda.MainButton.onClick = console.log('pizdec')
+// pizda.MainButton.onClick = console.log('pizdec')
 
-Telegram.WebApp.MainButton.onClick(pizdec())
+window.Telegram.WebApp.MainButton.onClick(pizdec())
 
 function pizdec(){
   console.log('pizda')
