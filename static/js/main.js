@@ -11,6 +11,10 @@ pizda.MainButton.onClick = function(callback) {
   pizda.MainButton.text = 'Пошел нахуй'
   console.log('pizda')
 }
+pizda.onEvent('mainButtonClicked', callback) = function(callback) {
+  pizda.MainButton.text = 'Пошел нахуй'
+  console.log('pizda')
+}
 
 // console.log(func()[0][3])
 //
