@@ -20,7 +20,7 @@ main_button.text = 'callback'
 function pizdec(){
   return console.log('test')
 }
-main_button.onClick(pizdec())
+main_button.onClick = pizdec()
 // pizda.onEvent('mainButtonClicked', callback) = function() {
 //   pizda.MainButton.text = 'Пошел нахуй'
 //   console.log('pizda')
