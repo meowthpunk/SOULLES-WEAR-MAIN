@@ -18,7 +18,7 @@ main_button.text = 'View ur cart'
 function mainButtonClickedEvent() {
   main_button.text = 'Pay $10.00'
   createCart()
-  main_button.onClick(pesik2)
+  // main_button.onClick(pesik2)
 }
 
 main_button.onClick(mainButtonClickedEvent)
