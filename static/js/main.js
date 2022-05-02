@@ -17,11 +17,11 @@ var main_button = window.Telegram.WebApp.MainButton
 main_button.text = 'callback'
 
 
-function pizdec(callback) {
-  var name = console.log('name')
-  callback(name)
+function pizdec() {
+  console.log('pizda')
 }
-main_button.onClick = pizdec()
+
+main_button.onClick(pizdec())
 // pizda.onEvent('mainButtonClicked', callback) = function() {
 //   pizda.MainButton.text = 'Пошел нахуй'
 //   console.log('pizda')
