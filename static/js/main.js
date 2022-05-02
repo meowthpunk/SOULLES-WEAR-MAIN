@@ -12,8 +12,6 @@ pizda.MainButton.onClick = function(callback) {
       onWebViewEvent('mainButtonClicked', callback);
       console.log('pizdec')
       return mainButton;
-    };
-  console.log(callback)
 }
 
 function pizdec(){
