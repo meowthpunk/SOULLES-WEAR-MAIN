@@ -4,6 +4,7 @@ pizda = window.Telegram.WebApp
 pizda.MainButton.text = 'View ur cart'
 pizda.MainButton.show()
 pizda.MainButton.color = '#8b8bd0'
+pizda.isExpanded = true
 
 // console.log(func()[0][3])
 //
