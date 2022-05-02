@@ -1,8 +1,9 @@
 // console.log(func())
 // console.log('123')
 pizda = window.Telegram.WebApp
-pizda.MainButton.text = 'Telegram'
+pizda.MainButton.text = 'View ur cart'
 pizda.MainButton.show()
+pizda.MainButton.color = '#8b8bd0'
 
 // console.log(func()[0][3])
 //
