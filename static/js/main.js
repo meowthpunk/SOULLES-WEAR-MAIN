@@ -8,7 +8,7 @@ pizda.MainButton.text = 'View ur cart'
 pizda.MainButton.show()
 pizda.MainButton.color = '#8b8bd0'
 pizda.isExpanded = false
-callback = [{id:4,size:2}]
+// callback = [{id:4,size:2}]
 // pizda.MainButton.onClick = console.log('pizdec')
 
 // window.Telegram.WebApp.MainButton.onClick(pizdec())
@@ -17,10 +17,10 @@ var main_button = window.Telegram.WebApp.MainButton
 main_button.text = 'callback'
 
 
-function pizdec(){
+function pizdec(callback) {
   return console.log('test')
 }
-main_button.onClick = pizdec()
+main_button.onClick = pizdec(callback)
 // pizda.onEvent('mainButtonClicked', callback) = function() {
 //   pizda.MainButton.text = 'Пошел нахуй'
 //   console.log('pizda')
