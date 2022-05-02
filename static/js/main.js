@@ -11,13 +11,13 @@ pizda.isExpanded = false
 callback = [{id:4,size:2}]
 // pizda.MainButton.onClick = console.log('pizdec')
 
-window.Telegram.WebApp.MainButton.onClick(console.log('test'))
+window.Telegram.WebApp.MainButton.onClick(pizdec())
 
 var main_button = window.Telegram.WebApp.MainButton
 main_button.text = 'callback'
 
 function pizdec(){
-  console.log('pizda')
+  return console.log('test')
 }
 // pizda.onEvent('mainButtonClicked', callback) = function() {
 //   pizda.MainButton.text = 'Пошел нахуй'
