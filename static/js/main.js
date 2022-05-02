@@ -10,8 +10,8 @@ pizda.isExpanded = false
 callback = [{id:4,size:2}]
 pizda.MainButton.onClick = function(callback) {
       onWebViewEvent('mainButtonClicked', callback);
-      console.log('pizdec')
-      return mainButton;
+      // console.log('pizdec')
+      return console.log('pizdec');
 }
 
 function pizdec(){
