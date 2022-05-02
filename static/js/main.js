@@ -7,7 +7,8 @@ pizda.MainButton.text = 'View ur cart'
 pizda.MainButton.show()
 pizda.MainButton.color = '#8b8bd0'
 pizda.isExpanded = false
-pizda.MainButton.setText('Gavno')
+callback = [{id:4,size:2}]
+pizda.MainButton.onClick(callback)
 
 function pizdec(){
   console.log('pizda')
