@@ -7,7 +7,8 @@ pizda.MainButton.text = 'View ur cart'
 pizda.MainButton.show()
 pizda.MainButton.color = '#8b8bd0'
 pizda.isExpanded = false
-pizda.MainButton.onClick = pizdec(callback)
+pizda.MainButton.onClick(pizdec())
+
 function pizdec(){
   console.log('pizda')
 }
