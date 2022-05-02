@@ -1,5 +1,7 @@
 // console.log(func())
 // console.log('123')
+pizda = window.Telegram.WebApp
+pizda.MainButton.text = 'Telegram'
 
 
 // console.log(func()[0][3])
