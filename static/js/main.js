@@ -10,7 +10,7 @@ pizda.isExpanded = false
 callback = [{id:4,size:2}]
 // pizda.MainButton.onClick = console.log('pizdec')
 
-window.Telegram.WebApp.MainButton.onClick(pizdec())
+window.Telegram.WebApp.MainButton.onClick(console.log('test'))
 
 function pizdec(){
   console.log('pizda')

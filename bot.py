@@ -68,8 +68,7 @@ async def aaa_call(callback: types.CallbackQuery):
 
 @dp.message_handler(commands="start")
 async def cmd_start(message: types.Message):
-    # await message.answer("Let's start!😀", reply_markup=InlineKeyboardMarkup().add(InlineKeyboardButton(text="Order food", web_app = WebAppInfo(url="https://hub.delivery/"))))
-    # menu_button = MenuButton()
+    reply_markup=InlineKeyboardMarkup().add(InlineKeyboardButton(text="Order food", web_app = WebAppInfo(url="https://flask-test-bot-back.herokuapp.com/"))))
     print(message.from_user.id)
     # print(menu_button)
     create_customer(message.from_user.id)
