@@ -8,7 +8,7 @@ pizda.MainButton.show()
 pizda.MainButton.color = '#8b8bd0'
 pizda.isExpanded = false
 callback = [{id:4,size:2}]
-pizda.MainButton.onClick(console.log(callback)) = function(){
+pizda.MainButton.onClick = function(){
   console.log(callback)
 }
 
