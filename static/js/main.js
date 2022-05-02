@@ -2,26 +2,25 @@
 // console.log('123')
 
 pizda = window.Telegram.WebApp
-console.log(pizda)
-console.log('test')
 pizda.MainButton.text = 'View ur cart'
 pizda.MainButton.show()
 pizda.MainButton.color = '#8b8bd0'
-pizda.isExpanded = false
+// pizda.isExpanded = false
 // callback = [{id:4,size:2}]
 // pizda.MainButton.onClick = console.log('pizdec')
 
 // window.Telegram.WebApp.MainButton.onClick(pizdec())
 
 var main_button = window.Telegram.WebApp.MainButton
-main_button.text = 'callback'
+main_button.text = 'View ur cart'
 
 
-function pizdec() {
-  console.log('pizda')
+function mainButtonClickedEvent() {
+  main_button.text = 'Pay $10.00'
+  createCart()
 }
 
-main_button.onClick(pizdec)
+main_button.onClick(mainButtonClickedEvent)
 // pizda.onEvent('mainButtonClicked', callback) = function() {
 //   pizda.MainButton.text = 'Пошел нахуй'
 //   console.log('pizda')
