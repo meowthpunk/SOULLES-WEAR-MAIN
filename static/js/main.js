@@ -346,8 +346,6 @@ function createProductItemInfo(product_id){
   product_add_button_button.innerText = 'ADD'
 
   product_add_button.onclick = function(){
-    cartble = document.getElementById('main-cart')
-    cartble.classList.add('shown')
     if (this.classList.contains('add-active')){
       size_get = document.getElementsByClassName('size-selected')
       size_id = size_get[0].id
