@@ -14,7 +14,7 @@ callback = [{id:4,size:2}]
 window.Telegram.WebApp.MainButton.onClick(console.log('test'))
 
 var main_=button = window.Telegram.WebApp.MainButton
-main_button.text('callback')
+main_button.text = 'callback'
 
 function pizdec(){
   console.log('pizda')
