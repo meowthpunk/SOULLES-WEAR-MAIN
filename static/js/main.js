@@ -3,6 +3,7 @@
 
 pizda = window.Telegram.WebApp
 console.log(pizda)
+console.log('test')
 pizda.MainButton.text = 'View ur cart'
 pizda.MainButton.show()
 pizda.MainButton.color = '#8b8bd0'
