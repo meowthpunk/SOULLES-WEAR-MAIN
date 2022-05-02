@@ -5,7 +5,7 @@ pizda.MainButton.text = 'View ur cart'
 pizda.MainButton.show()
 pizda.MainButton.color = '#8b8bd0'
 pizda.isExpanded = false
-pizda.MainButton.onClick() = function() {
+pizda.MainButton.onClick = function(callback) {
   pizda.MainButton.text = 'Пошел нахуй'
 }
 
