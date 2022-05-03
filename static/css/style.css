@@ -192,6 +192,7 @@ body{
   padding: 10px 14px 16px 14px;
   display: grid;
   grid-template-rows: 38px auto;
+  margin-top: -10px;
   /* padding: 10px;
   display: grid;
   grid-template-columns: auto 50px;
