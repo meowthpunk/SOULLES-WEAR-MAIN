@@ -765,15 +765,15 @@ function showMainButton(){
 function cartMainButton(){
   createCart()
   counttt = 0
+  main_button.text = 'Pay $' + cartCost()
+}
+
+function cartCost(){
   for (var i = 0; i < productList.length; i++) {
     filter = products.filter( element => element.id == productList[i].product_id)
-    // console.log(filter[0])
-    // console.log(filter[0].price)
-    // console.log(productList[i].product_id)
-    // console.log(productList[i].counter)
-      counttt += productList[i].counter * filter[0].price
+    counttt += productList[i].counter * filter[0].price
   }
-  main_button.text = 'Pay $' + counttt
+  return counttt
 }
 // console.log(products[1].descrition)
 
