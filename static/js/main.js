@@ -24,6 +24,7 @@ function mainButtonClickedEvent() {
 
 main_button.onClick(mainButtonClickedEvent)
 
+console.log(main_button)
 
 // function testfunc() {
 //   console.log('testfunc')
