@@ -6,7 +6,8 @@
 
 // window.Telegram.WebApp.MainButton.onClick(pizdec())
 const urlParams = decodeURIComponent(window.Telegram.WebApp.initData)
-console.log(urlParams)
+let parsedParams = Object.fromEntries(new URLSearchParams(params))
+console.log(parsedParams)
 // let params = decodeURIComponent(…)
 // console.log(urlParams.get(id))
 window.Telegram.WebView.initParams.tgAppThemeParams = {"bg_color":"#8b8bd0","text_color":"#ffffff","hint_color":"#aaaaaa","link_color":"#8774e1","button_color":"#8774e1","button_text_color":"#ffffff"}
