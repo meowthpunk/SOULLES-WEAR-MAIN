@@ -10,6 +10,9 @@ var main_button = window.Telegram.WebApp.MainButton
 main_button.text = 'View ur cart'
 main_button.color = '#8b8bd0'
 
+cartable = true
+payable = false
+
 // function mainButtonClickedEvent() {
 //   main_button.text = 'Pay $10.00'
 //   createCart()
@@ -451,6 +454,8 @@ function createCart(){
   btn.onclick = function(){
     main_button.text = 'View ur cart'
     createCategory()
+    cartable = true
+    payable = false
   }
   cart_edit_button.appendChild(btn)
 
@@ -764,14 +769,20 @@ function showMainButton(){
 }
 
 function cartMainButton(){
-  createCart()
-  counttt = 0
-  main_button.text = 'Pay $' + cartCost()
-  main_button.onClick(payMainButton)
+  if (cartable == true){
+    createCart()
+    counttt = 0
+    main_button.text = 'Pay $' + cartCost()
+    main_button.onClick(payMainButton)
+    cartable = false
+    payable = true
+  }
 }
 
 function payMainButton(){
-  console.log('Pay $' + cartCost())
+  if payable == true{
+    console.log('Pay $' + cartCost())
+  }
 }
 
 function cartCost(){
