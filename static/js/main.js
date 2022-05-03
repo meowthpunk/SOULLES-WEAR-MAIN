@@ -367,7 +367,7 @@ function createProductItemInfo(product_id){
   product_price_text = document.createElement('p')
   product_descr_text = document.createElement('p')
   product_name_text.innerText = products[main_id].name
-  product_price_text.innerText = products[main_id].price
+  product_price_text.innerText = '$' + products[main_id].price
   product_descr_text.innerText = products[main_id].description
   product_name.appendChild(product_name_text)
   product_price.appendChild(product_price_text)
