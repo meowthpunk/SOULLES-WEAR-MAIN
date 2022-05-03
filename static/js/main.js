@@ -540,8 +540,7 @@ function createCart(){
         this.parentElement.parentElement.parentElement.remove()
       }
       if (productList.length == 0){
-        main_cart = document.getElementById('main-cart')
-        main_cart.classList.remove('shown')
+        main_button.hide()
         createCategory()
       }
     }
