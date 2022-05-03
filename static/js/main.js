@@ -763,9 +763,14 @@ function showMainButton(){
 }
 
 function cartMainButton(){
+  createCategory()
   counttt = 0
   for (var i = 0; i < productList.length; i++) {
     filter = products.filter( element => element.id == productList[i].product_id)
+    console.log(filter)
+    console.log(filter.price)
+    console.log(productList[i].product_id)
+    console.log(productList[i].count)
     counttt += productList[i].count * filter.price
   }
   main_button.text = 'Pay $' + counttt
