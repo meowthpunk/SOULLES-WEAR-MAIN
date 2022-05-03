@@ -323,15 +323,15 @@ def index():
         print(product_data)
         print(id_data)
         takedList = []
-        messageCr = 'Products in your order: \n'
+        messageCr = '📦 Products in your order: \n'
         for i in range(len(product_data)):
             takedList.append([
                 product_data[i]['product_id'],
                 product_data[i]['size_id'],
                 product_data[i]['counter'],
             ])
-            messageCr += '\n' + str(product_data[i]['product_name']) + ' | Size - ' + str(product_data[i]['size_name']) + '\nPrice - ' + str(product_data[i]['price']) + ' | In quantity ' + str(product_data[i]['counter']) + ' шт,\n'
-        messageCr += '\nTotal cost - $' + str(data['cost'])
+            messageCr += '\n<b>' + str(product_data[i]['product_name']) + '</b> | Size - ' + str(product_data[i]['size_name']) + '\nPrice - ' + str(product_data[i]['price']) + ' | In quantity ' + str(product_data[i]['counter']) + '\n'
+        messageCr += '\n💵 Total cost - $' + str(data['cost'])
         smbtgrm(tokenBotApi, id_data, messageCr)
         # create_order(4, takedList)
         print(takedList)
