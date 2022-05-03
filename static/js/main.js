@@ -19,12 +19,20 @@ function mainButtonClickedEvent() {
   main_button.text = 'Pay $10.00'
   createCart()
 
-  main_button.onClick(pesik2)
+  mainButton.onClick = function(callback) {
+        onWebViewEvent('mainButtonClicked', pesik2);
+        return mainButton;
+  };
 }
 
-main_button.onClick = function(mainButtonClickedEvent){
-  mainButtonClickedEvent()
-}
+// main_button.onClick = function(mainButtonClickedEvent){
+//   mainButtonClickedEvent()
+// }
+
+mainButton.onClick = function(mainButtonClickedEvent) {
+      onWebViewEvent('mainButtonClicked', mainButtonClickedEvent);
+      return mainButton;
+};
 
 console.log(main_button)
 
