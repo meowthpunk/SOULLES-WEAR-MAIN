@@ -330,7 +330,7 @@ def index():
                 product_data[i]['size_id'],
                 product_data[i]['counter'],
             ])
-            messageCr += '\n<b>' + str(product_data[i]['product_name']) + '</b> | Size - ' + str(product_data[i]['size_name']) + '\nPrice - ' + str(product_data[i]['price']) + ' | In quantity ' + str(product_data[i]['counter']) + '\n'
+            messageCr += '\n' + str(product_data[i]['product_name']) + ' | Size - ' + str(product_data[i]['size_name']) + '\nPrice - $' + str(product_data[i]['price']) + ' | In quantity ' + str(product_data[i]['counter']) + '\n'
         messageCr += '\n💵 Total cost - $' + str(data['cost'])
         smbtgrm(tokenBotApi, id_data, messageCr)
         # create_order(4, takedList)
@@ -369,8 +369,8 @@ def zhopa():
 if __name__ == '__main__':
     # creatingSize()
 
-    productList = [['1', '5', 3], ['1', '2', 2]]
-    create_order(4, productList)
+    # productList = [['1', '5', 3], ['1', '2', 2]]
+    # # create_order(4, productList)
 
     # add = Product('Gbpltw', 5000)
     # db.session.add(add)
@@ -393,13 +393,13 @@ if __name__ == '__main__':
     # add_quantity_size(4, 1, 10)
     #
 
-    # db.create_all()
+    db.create_all()
     # delete_order(17)
 
     # create_category('Шапки')
     # create_category('Футболки')
-    # create_category('Худи')
-    # create_category('Свитшоты')
+    # create_category('Hoodies')
+    # create_category('Sweatshirts')
     #
     # set_category(1, 1)
 
@@ -409,7 +409,12 @@ if __name__ == '__main__':
     # customer_set_news(6, False)
     # customer_get_news(2)
     # query_news()
-
-
+    # add_Product('Sweatshirt Rize', 45)
+    # add_Product('Sweatshirt Touka', 40)
+    # add_Product('Sweatshirt Eto', 42)
+    # add_Product('Hoodie Rize', 65)
+    # add_Product('Hoodie Eto', 60)
+    # add_Product('Hoodie Touka', 60)
+    # creatingSize()
 
     app.run() #debug=True)
