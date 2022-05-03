@@ -6,7 +6,7 @@
 
 // window.Telegram.WebApp.MainButton.onClick(pizdec())
 const urlParams = decodeURIComponent(window.Telegram.WebApp.initData)
-let parsedParams = Object.fromEntries(new URLSearchParams(params))
+let parsedParams = Object.fromEntries(new URLSearchParams(urlParams))
 console.log(parsedParams)
 // let params = decodeURIComponent(…)
 // console.log(urlParams.get(id))
