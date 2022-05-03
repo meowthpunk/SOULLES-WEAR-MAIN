@@ -23,7 +23,7 @@ function mainButtonClickedEvent() {
 }
 
 main_button.onClick = function(mainButtonClickedEvent){
-  
+  mainButtonClickedEvent()
 }
 
 console.log(main_button)
