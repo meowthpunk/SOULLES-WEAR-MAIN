@@ -25,7 +25,7 @@
 }
 
 body{
-  background-color: white;
+  background-color: #303035;
 }
 .size-inactive{
   color: green;
@@ -377,8 +377,8 @@ body{
   height: 140px;
   width: 100%;
 }
-.cart-item + .cart-item{
-  margin-top: 20px;
+.cart-item{
+  margin-bottom: 20px;
 }
 .info-counter-cont{
   display: -webkit-flex;
