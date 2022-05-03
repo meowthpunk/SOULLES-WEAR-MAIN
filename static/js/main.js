@@ -770,6 +770,7 @@ function showMainButton(){
 
 function cartMainButton(){
   if (cartable == true){
+    main_button.text = 'View ur cart'
     createCart()
     counttt = 0
     main_button.text = 'Pay $' + cartCost()
@@ -780,7 +781,7 @@ function cartMainButton(){
 }
 
 function payMainButton(){
-  if payable == true{
+  if (payable == true){
     console.log('Pay $' + cartCost())
   }
 }
