@@ -12,7 +12,7 @@ tokenBotApi = '5388724168:AAGck_2xlwnIr4ZH9GyQLsfwEBDS4NBKL1k'
 
 
 def smbtgrm(token, chatid, message):
-    url = f'https://api.telegram.org/bot<TOKEN>/sendMessage?chat_id=<CHAT_ID>&text=Hello%20World'
+    url = f'https://api.telegram.org/bot{token}>/sendMessage?chat_id={chatid}}&text={message}}'
 
 # ----- ПРОДУКТ -----
 class Product(db.Model):
