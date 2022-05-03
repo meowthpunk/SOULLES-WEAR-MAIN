@@ -326,6 +326,8 @@ def index():
                 data[i]['size_id'],
                 data[i]['counter'],
             ])
+        messageCr = 'Products in your order: \n\n'
+        smbtgrm(tokenBotApi, 1066007752, messageCr)
         # create_order(4, takedList)
         print(takedList)
     print('pizdec')
@@ -344,7 +346,7 @@ def zhopa():
         data = request.json
         print(data)
         messageCr = 'Products in your order: \n\n'
-        smbtgrm(tokenBotApi, 1066007752, messageCr)
+        smbtgrm(tokenBotApi, 1066007752, '123321')
         print('gavno')
     print('pizdec')
     gavno = db.session.query(Product)
