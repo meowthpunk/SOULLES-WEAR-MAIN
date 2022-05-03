@@ -449,6 +449,7 @@ function createCart(){
   btn = document.createElement('div')
   btn.innerText = 'EDIT'
   btn.onclick = function(){
+    main_button.text = 'View ur cart'
     createCategory()
   }
   cart_edit_button.appendChild(btn)
@@ -763,12 +764,11 @@ function showMainButton(){
 
 function cartMainButton(){
   counttt = 0
-
   for (var i = 0; i < productList.length; i++) {
     filter = products.filter( element => element.id == productList[i].product_id)
     counttt += productList[i].count * filter.price
   }
-  main_button.text = 'Pay $' +
+  main_button.text = 'Pay $' + counttt
 }
 // console.log(products[1].descrition)
 
