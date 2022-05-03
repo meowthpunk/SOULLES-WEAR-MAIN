@@ -9,6 +9,7 @@
 var main_button = window.Telegram.WebApp.MainButton
 main_button.text = 'View ur cart'
 main_button.color = '#8b8bd0'
+window.Telegram.WebApp.ThemeParams.bg_color = #303035
 
 var cartable = true
 var payable = false
