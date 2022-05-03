@@ -1,10 +1,5 @@
 // console.log(func())
 // console.log('123')
-
-pizda = window.Telegram.WebApp
-pizda.MainButton.text = 'View ur cart'
-pizda.MainButton.show()
-pizda.MainButton.color = '#8b8bd0'
 // pizda.isExpanded = false
 // callback = [{id:4,size:2}]
 // pizda.MainButton.onClick = console.log('pizdec')
@@ -13,26 +8,26 @@ pizda.MainButton.color = '#8b8bd0'
 
 var main_button = window.Telegram.WebApp.MainButton
 main_button.text = 'View ur cart'
+main_button.color = '#8b8bd0'
 
-
-function mainButtonClickedEvent() {
-  main_button.text = 'Pay $10.00'
-  createCart()
-
-  main_button.onClick = function(pesik2) {
-        onWebViewEvent('mainButtonClicked', pesik2);
-        return main_button;
-  };
-}
+// function mainButtonClickedEvent() {
+//   main_button.text = 'Pay $10.00'
+//   createCart()
+//
+//   main_button.onClick = function(pesik2) {
+//         onWebViewEvent('mainButtonClicked', pesik2);
+//         return main_button;
+//   };
+// }
 
 // main_button.onClick = function(mainButtonClickedEvent){
 //   mainButtonClickedEvent()
 // }
 
-main_button.onClick = function(mainButtonClickedEvent) {
-      onWebViewEvent('mainButtonClicked', mainButtonClickedEvent);
-      return main_button;
-};
+// main_button.onClick = function(mainButtonClickedEvent) {
+//       onWebViewEvent('mainButtonClicked', mainButtonClickedEvent);
+//       return main_button;
+// };
 
 console.log(main_button)
 
@@ -367,6 +362,7 @@ function createProductItemInfo(product_id){
       size_get = document.getElementsByClassName('size-selected')
       size_id = size_get[0].id
       addCountProduct(product_id, size_id)
+      showMainButton()
     }
     else{
       console.log('error')
@@ -761,6 +757,10 @@ function clearNav(){
   }
 }
 
+function showMainButton(){
+  main_button.show()
+  main_button.onClick(createCart)
+}
 // console.log(products[1].descrition)
 
 
