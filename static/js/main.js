@@ -776,8 +776,8 @@ function pesik(){
 }
 
 function pesik2(){
+  exported = {id: exportId, expProduct:productList}
   fetch("/", {
-    exported = {id: exportId, expProduct:productList}
     method: "POST",
     headers: {'Content-Type': 'application/json'},
     body: JSON.stringify(exported)
