@@ -102,6 +102,7 @@ function createCategory(){
 
         cat_item.id = 'category-' + cats[i].id
         cat_item.onclick = function(){
+          window.Telegram.WebApp.expand()
           createProducts(this.id)
         }
         cat_cont.appendChild(cat_item)
@@ -827,7 +828,6 @@ function mainButtonClickedTest(){
     createCart()
     main_button.text = 'Pay $' + cartCost()
     cartable = false
-    window.Telegram.WebApp.isExpanded = false
   }
   else{
     window.Telegram.WebApp.close()
