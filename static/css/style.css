@@ -54,6 +54,7 @@ body{
   margin-left: 330px;
   margin-top: 560px;
   font-size: 10px;
+  color: white;
 }
 .mar{
   margin-top: 570px;
@@ -195,7 +196,7 @@ body{
   display: grid;
   grid-template-columns: auto 50px;
   grid-template-rows: 26px auto; */
-  height: 73px
+  height: 63px
   /* align-items:space-between; */
 }
 .product-item-info-name{
@@ -216,6 +217,10 @@ body{
   color: white;
   font-size: 10px;
   padding-right: 20px;
+}
+.product-item-info-descr p{
+  line-height: 1px;
+  line-height: 10px;
 }
 .cart-item-info-main{
   display: -webkit-flex;
