@@ -318,16 +318,19 @@ def get_id(tg_id):
 def index():
     if request.method == 'POST':
         data = request.json
-        print(data)
+        product_data = data['expProduct']
+        id_data = data['id']
+        print(product_data)
+        print(id_data)
         takedList = []
-        for i in range(len(data)):
+        for i in range(len(product_data)):
             takedList.append([
-                data[i]['product_id'],
-                data[i]['size_id'],
-                data[i]['counter'],
+                product_data[i]['product_id'],
+                product_data[i]['size_id'],
+                product_data[i]['counter'],
             ])
         messageCr = 'Products in your order: \n\n'
-        smbtgrm(tokenBotApi, 1066007752, messageCr)
+        smbtgrm(tokenBotApi, id_data, messageCr)
         # create_order(4, takedList)
         print(takedList)
     print('pizdec')
