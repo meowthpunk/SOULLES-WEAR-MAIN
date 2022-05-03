@@ -3,6 +3,10 @@
     src: url('/static/fonts/BAHNSCHRIFT.ttf');
 }
 
+:root{
+  --tg-theme-bg-color: #235ad1;
+}
+
 *{
   font-family: BAHNSCHRIFT;
   margin: 0;
