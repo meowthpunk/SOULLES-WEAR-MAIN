@@ -766,6 +766,11 @@ function cartMainButton(){
   createCart()
   counttt = 0
   main_button.text = 'Pay $' + cartCost()
+  main_button.onClick(payMainButton)
+}
+
+function payMainButton(){
+  console.log('Pay $'cartCost())
 }
 
 function cartCost(){
