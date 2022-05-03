@@ -19,7 +19,7 @@ function mainButtonClickedEvent() {
   main_button.text = 'Pay $10.00'
   createCart()
 
-  mainButton.onClick = function(callback) {
+  main_button.onClick = function(pesik2) {
         onWebViewEvent('mainButtonClicked', pesik2);
         return mainButton;
   };
@@ -29,7 +29,7 @@ function mainButtonClickedEvent() {
 //   mainButtonClickedEvent()
 // }
 
-mainButton.onClick = function(mainButtonClickedEvent) {
+main_button.onClick = function(mainButtonClickedEvent) {
       onWebViewEvent('mainButtonClicked', mainButtonClickedEvent);
       return mainButton;
 };
