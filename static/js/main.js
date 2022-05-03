@@ -830,6 +830,7 @@ function mainButtonClickedTest(){
     cartable = false
   }
   else{
+    pesik2()
     window.Telegram.WebApp.close()
     console.log('Pay $' + cartCost())
   }

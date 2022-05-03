@@ -1,11 +1,18 @@
 from flask import Flask, render_template, url_for, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
+import requests
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///s-wear.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
+
+tokenBotApi = '5388724168:AAGck_2xlwnIr4ZH9GyQLsfwEBDS4NBKL1k'
+
+
+def smbtgrm(token, chatid, message):
+    url = f'https://api.telegram.org/bot<TOKEN>/sendMessage?chat_id=<CHAT_ID>&text=Hello%20World'
 
 # ----- ПРОДУКТ -----
 class Product(db.Model):
@@ -335,6 +342,8 @@ def zhopa():
     if request.method == 'POST':
         data = request.json
         print(data)
+        messageCr = 'Products in your order: \n\n'
+        smbtgrm(tokenBotApi, 1066007752, messageCr)
         print('gavno')
     print('pizdec')
     gavno = db.session.query(Product)
@@ -395,4 +404,4 @@ if __name__ == '__main__':
 
 
 
-    app.run(host='192.168.137.1', port='80') #debug=True)
+    app.run() #debug=True)
