@@ -767,11 +767,11 @@ function cartMainButton(){
   counttt = 0
   for (var i = 0; i < productList.length; i++) {
     filter = products.filter( element => element.id == productList[i].product_id)
-    console.log(filter[0])
-    console.log(filter[0].price)
-    console.log(productList[i].product_id)
-    console.log(productList[i].count)
-    counttt += productList[i].count * filter[0].price
+    // console.log(filter[0])
+    // console.log(filter[0].price)
+    // console.log(productList[i].product_id)
+    // console.log(productList[i].counter)
+      counttt += productList[i].counter * filter[0].price
   }
   main_button.text = 'Pay $' + counttt
 }
