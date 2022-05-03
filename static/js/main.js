@@ -12,9 +12,10 @@ main_button.color = '#8b8bd0'
 
 
 // window.Telegram.WebApp.start_param({themeParams : {bg_color : '#8b8bd0'}})
-console.log(window.Telegram.WebApp.start_param)
-console.log(window.Telegram.WebApp.WebAppinitData)
 console.log(window.Telegram.WebApp)
+console.log(window.Telegram.WebApp.WebAppInitData)
+console.log(window.Telegram.WebApp)
+// mainButton.setParams({}).showProgress();
 // console.log(window.Telegram.WebApp.themeParams())
 // window.Telegram.WebApp.themeParams(bg_color = '#303035')
 
@@ -797,7 +798,7 @@ function clearNav(){
 
 function showMainButton(){
   main_button.show()
-  main_button.onClick(cartMainButton)
+  main_button.setParams({}).cartMainButton()
 }
 
 function cartMainButton(){
@@ -807,7 +808,7 @@ function cartMainButton(){
 
     main_button.text = 'Pay $' + cartCost()
     console.log('payable = ' + payable)
-    main_button.onClick(payMainButton)
+    main_button.setParams({}).payMainButton()
     cartable = false
     payable = true
     console.log('cartable = ' + cartable)
