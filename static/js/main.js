@@ -19,11 +19,15 @@ function mainButtonClickedEvent() {
   main_button.text = 'Pay $10.00'
   createCart()
 
-  main_button.onClick() = pesik2
+  main_button.onClick(testfunc)
 }
 
-main_button.onClick() = mainButtonClickedEvent
+main_button.onClick(mainButtonClickedEvent)
 
+
+function testfunc() {
+  console.log('testfunc')
+}
 // console.log(func()[0][3])
 //
 // for (var i = 0; i < func().length; i++) {
