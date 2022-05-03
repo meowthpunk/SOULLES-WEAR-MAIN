@@ -8,7 +8,7 @@
 const urlParams = decodeURIComponent(window.Telegram.WebApp.initData)
 let parsedParams = Object.fromEntries(new URLSearchParams(urlParams))
 let gettedIdUra = JSON.parse(parsedParams.user)
-console.log(gettedIdUra.id)
+let exportId = gettedIdUra.id
 // let params = decodeURIComponent(…)
 // console.log(urlParams.get(id))
 window.Telegram.WebView.initParams.tgAppThemeParams = {"bg_color":"#8b8bd0","text_color":"#ffffff","hint_color":"#aaaaaa","link_color":"#8774e1","button_color":"#8774e1","button_text_color":"#ffffff"}
@@ -777,9 +777,10 @@ function pesik(){
 
 function pesik2(){
   fetch("/", {
+    exported = {id: exportId, expProduct:productList}
     method: "POST",
     headers: {'Content-Type': 'application/json'},
-    body: JSON.stringify(productList)
+    body: JSON.stringify(exported)
   })
 }
 
