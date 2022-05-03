@@ -487,6 +487,7 @@ function createCart(){
   btn.onclick = function(){
     main_button.text = 'View ur cart'
     createCategory()
+    cartable = true
   }
   cart_edit_button.appendChild(btn)
 
@@ -580,6 +581,7 @@ function createCart(){
       if (productList.length == 0){
         main_button.hide()
         createCategory()
+        cartable = true
       }
     }
 
@@ -827,6 +829,7 @@ function mainButtonClickedTest(){
     cartable = false
   }
   else{
+    window.Telegram.WebApp.close()
     console.log('Pay $' + cartCost())
   }
 }
