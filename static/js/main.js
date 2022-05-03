@@ -772,8 +772,9 @@ function cartMainButton(){
   if (cartable == true){
     main_button.text = 'View ur cart'
     createCart()
-    counttt = 0
+
     main_button.text = 'Pay $' + cartCost()
+    console.log('payable = ' + payable)
     main_button.onClick(payMainButton)
     cartable = false
     payable = true
@@ -791,6 +792,7 @@ function payMainButton(){
 }
 
 function cartCost(){
+  counttt = 0
   for (var i = 0; i < productList.length; i++) {
     filter = products.filter( element => element.id == productList[i].product_id)
     counttt += productList[i].counter * filter[0].price
