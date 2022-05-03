@@ -777,12 +777,16 @@ function cartMainButton(){
     main_button.onClick(payMainButton)
     cartable = false
     payable = true
+    console.log('cartable = 'cartable)
+    console.log('payable = 'payable)
   }
 }
 
 function payMainButton(){
   if (payable == true){
     console.log('Pay $' + cartCost())
+    console.log('cartable = 'cartable)
+    console.log('payable = 'payable)
   }
 }
 
