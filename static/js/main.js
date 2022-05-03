@@ -15,7 +15,7 @@ main_button.onClick(mainButtonClickedTest)
 // window.Telegram.WebApp.start_param({themeParams : {bg_color : '#8b8bd0'}})
 console.log(window.Telegram.WebApp)
 console.log(window.Telegram.WebApp.WebAppInitData)
-console.log(window.Telegram.WebApp)
+console.log(window.Telegram.WebAppUser)
 // mainButton.setParams({}).showProgress();
 // console.log(window.Telegram.WebApp.themeParams())
 // window.Telegram.WebApp.themeParams(bg_color = '#303035')
