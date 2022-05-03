@@ -798,29 +798,38 @@ function clearNav(){
 
 function showMainButton(){
   main_button.show()
-  main_button.setParams({}).cartMainButton()
 }
 
-function cartMainButton(){
+// function cartMainButton(){
+//   if (cartable == true){
+//     main_button.text = 'View ur cart'
+//     createCart()
+//
+//     main_button.text = 'Pay $' + cartCost()
+//     console.log('payable = ' + payable)
+//     main_button.setParams({}).payMainButton()
+//     cartable = false
+//   }
+// }
+
+// function payMainButton(){
+//   if (payable == true){
+//     console.log('Pay $' + cartCost())
+//     console.log('cartable = ' + cartable)
+//     console.log('payable = ' + payable)
+//   }
+// }
+
+
+function mainButtonClickedTest(){
   if (cartable == true){
     main_button.text = 'View ur cart'
     createCart()
-
     main_button.text = 'Pay $' + cartCost()
-    console.log('payable = ' + payable)
-    main_button.setParams({}).payMainButton()
     cartable = false
-    payable = true
-    console.log('cartable = ' + cartable)
-    console.log('payable = ' + payable)
   }
-}
-
-function payMainButton(){
-  if (payable == true){
+  else{
     console.log('Pay $' + cartCost())
-    console.log('cartable = ' + cartable)
-    console.log('payable = ' + payable)
   }
 }
 
