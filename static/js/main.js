@@ -5,7 +5,9 @@
 // pizda.MainButton.onClick = console.log('pizdec')
 
 // window.Telegram.WebApp.MainButton.onClick(pizdec())
-
+const urlParams = new URLSearchParams(window.Telegram.WebApp.initData)
+console.log(urlParams)
+console.log(urlParams.get(id))
 window.Telegram.WebView.initParams.tgAppThemeParams = {"bg_color":"#8b8bd0","text_color":"#ffffff","hint_color":"#aaaaaa","link_color":"#8774e1","button_color":"#8774e1","button_text_color":"#ffffff"}
 var main_button = window.Telegram.WebApp.MainButton
 main_button.text = 'View ur cart'
