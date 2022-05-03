@@ -363,6 +363,9 @@ function createProductItemInfo(product_id){
   product_add_button.onclick = function(){
     if (this.classList.contains('add-active')){
       size_get = document.getElementsByClassName('size-selected')
+      size_get[0].classList.add("size-inactive")
+      size_get[0].classList.add("size-stmt")
+      product_add_button.classList.remove("add-active")
       size_id = size_get[0].id
       addCountProduct(product_id, size_id)
       showMainButton()
@@ -382,19 +385,40 @@ function createProductItemInfo(product_id){
           size_item.id = 'size-' + size[z].id
           sizes_map.appendChild(size_item)
           size_item.classList.add("size-active")
-          size_item.onclick = function(){
-            size_id = this.id
-            if (this.classList.contains("size-selected")){
-              product_add_button.classList.remove("add-active")
-              this.classList.remove("size-selected")
+          for (var stmt = 0; stmt < productList.length; stmt++){
+            filter = ''
+            filter2 = ''
+            filter = productList.filter(elem => elem.size_id == size[z].id)
+            filter2 = filter.filter(elem => ('product-' + elem.product_id) == product_id)
+            console.log('pr')
+            console.log(product_id)
+            console.log('filt')
+            console.log(filter2)
+            if (filter2.length != 0){
+              size_item.classList.add("size-stmt")
+              size_item.classList.add("size-inactive")
             }
             else{
-              find = document.getElementsByClassName('size-selected')
-              for(var i=0; i < find.length; i++){
-                find[i].classList.remove("size-selected")
+              size_item.classList.add("size-active")
+            }
+          }
+          size_item.onclick = function(){
+            if (this.classList.contains('size-inactive')){
+              console.log('pizdec')
+            }
+            else{
+              if (this.classList.contains("size-selected")){
+                product_add_button.classList.remove("add-active")
+                this.classList.remove("size-selected")
               }
-              product_add_button.classList.add("add-active")
-              this.classList.add("size-selected")
+              else{
+                find = document.getElementsByClassName('size-selected')
+                for(var i=0; i < find.length; i++){
+                  find[i].classList.remove("size-selected")
+                }
+                product_add_button.classList.add("add-active")
+                this.classList.add("size-selected")
+              }
             }
           }
         }
