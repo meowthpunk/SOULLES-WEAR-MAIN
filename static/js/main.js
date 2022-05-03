@@ -6,6 +6,7 @@
 
 // window.Telegram.WebApp.MainButton.onClick(pizdec())
 
+window.Telegram.WebView.initParams.tgAppThemeParams = {"bg_color":"#8b8bd0","text_color":"#ffffff","hint_color":"#aaaaaa","link_color":"#8774e1","button_color":"#8774e1","button_text_color":"#ffffff"}
 var main_button = window.Telegram.WebApp.MainButton
 main_button.text = 'View ur cart'
 main_button.color = '#8b8bd0'
