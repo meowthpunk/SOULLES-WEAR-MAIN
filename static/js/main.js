@@ -623,7 +623,8 @@ function addCountProduct(product_id, size_id){
       product_name : stmt[2],
       size_id : stmt[3],
       size_name : stmt[4],
-      counter : 1
+      counter : 1,
+      price : stmt[5],
     })
     console.log(productList)
   }
@@ -646,11 +647,11 @@ function checkCart(product_id, size_id){
             }
           }
           if (trycheck != 0){
-            return ['Ready', products[i].id, products[i].name, size[x].id, size[x].name]
+            return ['Ready', products[i].id, products[i].name, size[x].id, size[x].name, products[i].price]
           }
         }
         else{
-          return ['Empty', products[i].id, products[i].name, size[x].id, size[x].name]
+          return ['Empty', products[i].id, products[i].name, size[x].id, size[x].name, products[i].price]
         }
       }
     }
