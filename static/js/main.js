@@ -21,7 +21,7 @@ function mainButtonClickedEvent() {
 
   main_button.onClick = function(pesik2) {
         onWebViewEvent('mainButtonClicked', pesik2);
-        return mainButton;
+        return main_button;
   };
 }
 
@@ -31,7 +31,7 @@ function mainButtonClickedEvent() {
 
 main_button.onClick = function(mainButtonClickedEvent) {
       onWebViewEvent('mainButtonClicked', mainButtonClickedEvent);
-      return mainButton;
+      return main_button;
 };
 
 console.log(main_button)
