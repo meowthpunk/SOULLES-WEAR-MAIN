@@ -530,7 +530,7 @@ function createCart(){
     info_price.className = 'info-price'
     for (var z = 0; z < products.length; z++){
       if (productList[i].product_id == products[z].id){
-        info_price.innerText = products[z].price * productList[i].counter
+        info_price.innerText = products[z].price
       }
     }
      // * productList[i].counter
