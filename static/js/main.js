@@ -525,6 +525,7 @@ function createCart(){
       product_id = this.parentElement.parentElement.parentElement.id
 
       this.parentElement.querySelector('#counter').innerText = countPlus(product_id, size_id)
+      main_button.text = 'Pay $' + cartCost()
     }
 
     cart_item_counter_btn_minus = document.createElement('button')
@@ -532,7 +533,7 @@ function createCart(){
     cart_item_counter_btn_minus.innerText = '-'
 
     cart_item_counter_btn_minus.onclick = function(){
-
+      main_button.text = 'Pay $' + cartCost()
       size_id = this.parentElement.id
       product_id = this.parentElement.parentElement.parentElement.id
       contex = countMinus(product_id, size_id)
@@ -770,7 +771,7 @@ function cartMainButton(){
 }
 
 function payMainButton(){
-  console.log('Pay $'cartCost())
+  console.log('Pay $' + cartCost())
 }
 
 function cartCost(){
