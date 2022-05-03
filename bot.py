@@ -43,11 +43,17 @@ async def send_message(message: types.Message):
 dp.register_message_handler(send_message, commands="test2")
 
 
+
 @dp.message_handler(commands="inline_url")
 async def set_none(message: types.Message):
     customer_set_news(5, None)
     customer_set_news(6, None)
     print('Gatova')
+
+@dp.message_handler(commands="inline_url")
+async def idinahuy():
+    bot.send_message(1066007752, 'idinahoy')
+    print(idinahuy)
 
 dp.register_message_handler(set_none, commands="test3")
 
@@ -70,10 +76,14 @@ async def aaa_call(callback: types.CallbackQuery):
 async def cmd_start(message: types.Message):
     reply_markup=InlineKeyboardMarkup().add(InlineKeyboardButton(text="Order food", web_app = WebAppInfo(url="https://flask-test-bot-back.herokuapp.com/")))
     print(message.from_user.id)
-    # print(menu_button)
-    create_customer(message.from_user.id)
+    # # print(menu_button)
+    # create_customer(message.from_user.id)
     print(message.from_user)
 
+@dp.message_handler()
+async def pizda(message: types.Message):
+    await message.answer(message.text)
 
-# on_startup(print('pizda'))
 executor.start_polling(dp, skip_updates=True)
+idinahuy()
+# await bot.send_message(1066007752, 'idinahoy')

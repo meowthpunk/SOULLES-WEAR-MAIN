@@ -318,7 +318,7 @@ def index():
                 data[i]['size_id'],
                 data[i]['counter'],
             ])
-        create_order(4, takedList)
+        # create_order(4, takedList)
         print(takedList)
     print('pizdec')
     gavno = db.session.query(Product)

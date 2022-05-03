@@ -827,6 +827,7 @@ function mainButtonClickedTest(){
     createCart()
     main_button.text = 'Pay $' + cartCost()
     cartable = false
+    window.Telegram.WebApp.isExpanded = true
   }
   else{
     window.Telegram.WebApp.close()
