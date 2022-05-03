@@ -22,7 +22,9 @@ function mainButtonClickedEvent() {
   main_button.onClick(pesik2)
 }
 
-main_button.onClick(mainButtonClickedEvent)
+main_button.onClick = function(mainButtonClickedEvent){
+  
+}
 
 console.log(main_button)
 
