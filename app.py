@@ -330,8 +330,8 @@ def index():
                 product_data[i]['size_id'],
                 product_data[i]['counter'],
             ])
-            # messageCr += f'\n{product_data[i]['product_name']} в количестве {product_data[i]['counter']} шт.'
-        messageCr += '\n\nОбщая стоимость - $' + '10000'
+            messageCr += '\n' + str(product_data[i]['product_name']) + 'в количестве' + str(product_data[i]['counter']) + 'шт,'
+        messageCr += '\n\nОбщая стоимость - $' + str(data['cost'])
         smbtgrm(tokenBotApi, id_data, messageCr)
         # create_order(4, takedList)
         print(takedList)
